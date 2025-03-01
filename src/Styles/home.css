@@ -1,0 +1,107 @@
+/* Home Page Styling */
+.home-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    margin-top: 50px;
+}
+
+/* Welcome Section */
+.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #01022daf;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px #0000001a;
+    width: 100%;
+    height: 600px;
+}
+
+.welcome h1 {
+    font-size: 28px;
+    font-weight: bold;
+    max-width: 800px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.welcome h3 {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/* Featured Books Section */
+.featuredbooks {
+    width: 100%;
+    background: #000313;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.featuredbooks h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Book List */
+.featuredbooks-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Book Item */
+.featuredbooks-item {
+    width: 300px;
+    background: darkcyan;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.featuredbooks-item:hover {
+    transform: scale(1.05);
+}
+
+.featuredbooks-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.featuredbooks-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.featuredbooks-item p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Read More Link */
+.featuredbooks-item a {
+    display: inline-block;
+    text-decoration: none;
+    background: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.featuredbooks-item a:hover {
+    background: #0056b3;
+}

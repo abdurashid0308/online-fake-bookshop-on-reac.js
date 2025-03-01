@@ -1,0 +1,88 @@
+/* Umumiy uslub */
+.user-action {
+  margin-top: 80px;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
+/* Sahifa sarlavhasi */
+.user-action h1 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Tugmalar konteyneri */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Ro'yxat uslubi */
+.action-buttons ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+/* Ro'yxat elementlari */
+.action-buttons li {
+  display: inline-block;
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Havolalar */
+.action-buttons li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Rasm uslubi */
+.action-buttons img {
+  width: 30px; /* Rasm o‘lchami */
+  height: 30px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effekti */
+.action-buttons li:hover {
+  background: #007bff;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.action-buttons li:hover a {
+  color: white;
+}
+
+.action-buttons li:hover img {
+  filter: brightness(0) invert(1); /* Ikonkani oq rangga o‘zgartiradi */
+  transform: scale(1.1);
+}
+
+/* 📱 Responsiv dizayn */
+@media (max-width: 768px) {
+  .action-buttons ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .action-buttons li {
+    width: 80%;
+    text-align: center;
+  }
+}
