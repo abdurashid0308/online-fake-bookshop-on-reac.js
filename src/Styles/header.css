@@ -1,67 +1,91 @@
-header{
-    position: fixed;
-    background-color: #000210fc;
-    padding: 15px 0px;
-    box-shadow: 0px 4px 6px #000a4897;
-    z-index: 10;
+:root {
+  --primary-color: #000210fc;
+  --secondary-color: #000a4897;
+  --hover-color: #0b1151;
+  --white: #ffffff;
+}
+
+header {
+  position: fixed;
+  background-color: var(--primary-color);
+  padding: 15px 0;
+  box-shadow: 0 4px 6px var(--secondary-color);
+  z-index: 10;
+  width: 100vw;
+  top: 0;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 20px;
+  margin: 0;
+}
+
+header nav ul .logo h1 {
+  font-size: 24px;
+  color: var(--white);
+}
+
+header nav ul .button {
+  border: 2px solid var(--white);
+  padding: 10px;
+  width: 80px;
+  text-align: center;
+  color: var(--white);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+header nav ul .button:hover {
+  color: var(--hover-color);
+  border-color: var(--hover-color);
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.searchBar input[type="search"] {
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 300px;
+}
+
+.searchBar button {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  color: var(--primary-color);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.searchBar button:hover {
+  background-color: var(--hover-color);
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  header nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .searchBar input[type="search"] {
     width: 100%;
-    top: 0px;
-}
-
-header ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
-    padding: 0px 20px;
-    margin: 0px;
-}
-
-header ul li h1{
-    font-size: 24px;
-}
-
-header ul .button{
-    border: 2px solid white;
-    padding: 10px;
-    width: 80px;
-    text-align: center;
-    align-items: center;
-    transition: color 0.5 ease;
-}
-
-header ul .button:hover{
-    color: darkblue;
-    border: darkblue;
-}
-
-.searchBar{
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    overflow: hidden;
-    background-color: white;
-}
-
-.searchBar input[type="search"]{
-    padding: 10px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    width: 300px;
-}
-
-.searchBar button{
-    padding: 10px;
-    border: none;
-    background-color: transparent;
-    color: black;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-}
-
-.search-container button:hover {
-    background-color: darkblue;
-    color: white;
+  }
 }

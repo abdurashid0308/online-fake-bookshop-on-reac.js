@@ -7,20 +7,20 @@
     text-align: center;
     min-height: 100vh;
     margin-top: 50px;
+    width: 100vw;
 }
 
 /* Welcome Section */
-.welcome{
+.welcome {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     background: #01022daf;
-    border-radius: 10px;
     box-shadow: 0px 4px 10px #0000001a;
-    width: 100%;
+    width: 100vw;
     height: 600px;
+    overflow: hidden;
 }
 
 .welcome h1 {
@@ -29,43 +29,58 @@
     max-width: 800px;
     color: #ffffff;
     margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
 }
 
 .welcome h3 {
     font-size: 20px;
     color: #ffffff;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Featured Books Section */
 .featuredbooks {
-    width: 100%;
+    width: 100vw;
     background: #000313;
-    padding: 30px;
+    padding: 50px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .featuredbooks h1 {
     font-size: 26px;
     margin-bottom: 20px;
-    color: #222;
+    color: #ffffff;
 }
 
 /* Book List */
 .featuredbooks-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px 40px;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
 }
 
 /* Book Item */
 .featuredbooks-item {
-    width: 300px;
-    background: darkcyan;
-    padding: 20px;
+    background: rgb(0, 67, 67);
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .featuredbooks-item:hover {
@@ -79,22 +94,17 @@
 }
 
 .featuredbooks-item h3 {
-    font-size: 18px;
-    color: #333;
+    font-size: 16px;
+    color: #ffffff;
     margin: 10px 0;
-}
-
-.featuredbooks-item p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 15px;
+    flex-grow: 1;
 }
 
 /* Read More Link */
 .featuredbooks-item a {
     display: inline-block;
     text-decoration: none;
-    background: #007bff;
+    background: darkblue;
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
@@ -104,4 +114,18 @@
 
 .featuredbooks-item a:hover {
     background: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 950px) {
+    .featuredbooks-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 660px) {
+    .featuredbooks-list {
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
 }
