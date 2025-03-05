@@ -1,11 +1,11 @@
 .user-action {
-  margin-top: 80px;
+  margin-top: 60px;
   text-align: center;
   padding: 20px;
   font-family: Arial, sans-serif;
   min-height: 100vh;
   background-color: #f8f9fa;
-  width: 100vw;
+  width: 100%;
 }
 
 .user-action h1 {
@@ -14,6 +14,7 @@
   margin-bottom: 30px;
 }
 
+/* Action Buttons Section */
 .action-buttons {
   display: flex;
   flex-direction: column;
@@ -30,10 +31,15 @@
   color: #333;
   font-weight: bold;
   transition: transform 0.3s ease;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .profile-button:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .profile-button img {
@@ -47,6 +53,9 @@
 .secondary-buttons {
   display: flex;
   gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  justify-content: center;
 }
 
 .action-button {
@@ -61,6 +70,7 @@
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
+  flex: 1;
 }
 
 .action-button:hover {
@@ -74,8 +84,13 @@
   margin-bottom: 10px;
 }
 
+/* Recently Viewed Books Section */
 .recently-viewed {
   margin-top: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .recently-viewed h2 {
@@ -84,45 +99,104 @@
   margin-bottom: 20px;
 }
 
-.book-list {
-  display: flex;
-  justify-content: center;
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.book-item {
-  background-color: #fff;
+.book-card {
+  background-color: #f0f0f0;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.book-item:hover {
+.book-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-.book-item img {
-  width: 100px;
-  height: 150px;
-  object-fit: cover;
+.book-actions {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.action-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.action-icon:hover {
+  transform: scale(1.1);
+}
+
+.book-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 5px;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
-.book-item p {
-  font-size: 14px;
+.book-card h3 {
+  font-size: 16px;
   color: #333;
+  margin: 10px 0;
+  flex-grow: 1;
 }
 
+.read-more {
+  display: inline-block;
+  text-decoration: none;
+  background: #007bff;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s;
+  margin-top: auto;
+}
+
+.read-more:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .secondary-buttons {
     flex-direction: column;
     gap: 10px;
   }
 
-  .book-list {
-    flex-direction: column;
-    align-items: center;
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .user-action {
+    padding: 10px;
+  }
+  
+  .recently-viewed {
+    padding: 10px;
   }
 }

@@ -11,7 +11,7 @@ header {
   padding: 15px 0;
   box-shadow: 0 4px 6px var(--secondary-color);
   z-index: 10;
-  width: 100vw;
+  width: 100%;
   top: 0;
 }
 

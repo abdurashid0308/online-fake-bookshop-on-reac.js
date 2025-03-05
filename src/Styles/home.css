@@ -1,4 +1,3 @@
-/* Home Page Styling */
 .home-main {
     display: flex;
     flex-direction: column;
@@ -10,7 +9,6 @@
     width: 100vw;
 }
 
-/* Welcome Section */
 .welcome {
     display: flex;
     flex-direction: column;
@@ -19,8 +17,9 @@
     background: #01022daf;
     box-shadow: 0px 4px 10px #0000001a;
     width: 100vw;
-    height: 600px;
+    height: 650px;
     overflow: hidden;
+    padding: 20px;
 }
 
 .welcome h1 {
@@ -49,7 +48,6 @@
     }
 }
 
-/* Featured Books Section */
 .featuredbooks {
     width: 100vw;
     background: #000313;
@@ -63,7 +61,6 @@
     color: #ffffff;
 }
 
-/* Book List */
 .featuredbooks-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -71,26 +68,50 @@
     justify-content: center;
 }
 
-/* Book Item */
 .featuredbooks-item {
-    background: rgb(0, 67, 67);
-    padding: 15px;
+    background: #858585ec;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 }
 
 .featuredbooks-item:hover {
     transform: scale(1.05);
 }
 
-.featuredbooks-item img {
+.book-actions {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+
+.action-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.action-icon:hover {
+    transform: scale(1.1);
+}
+
+.book-cover {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .featuredbooks-item h3 {
@@ -100,11 +121,10 @@
     flex-grow: 1;
 }
 
-/* Read More Link */
 .featuredbooks-item a {
     display: inline-block;
     text-decoration: none;
-    background: darkblue;
+    background: #000000;
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
@@ -116,7 +136,12 @@
     background: #0056b3;
 }
 
-/* Responsive design */
+@media (max-width: 1200px) {
+    .featuredbooks-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 @media (max-width: 950px) {
     .featuredbooks-list {
         grid-template-columns: repeat(3, 1fr);
@@ -126,6 +151,23 @@
 @media (max-width: 660px) {
     .featuredbooks-list {
         grid-template-columns: repeat(2, 1fr);
-        
+    }
+    
+    .featuredbooks {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .featuredbooks-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .welcome h1 {
+        font-size: 24px;
+    }
+    
+    .welcome h3 {
+        font-size: 18px;
     }
 }
