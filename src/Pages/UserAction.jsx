@@ -14,13 +14,11 @@ function UserAction() {
       .then(data => {
         setRecentlyViewedBooks(data.books.slice(10, 15));
       })
-      .catch(error => console.error("Error:", error));
   }, []);
 
-  return (
-    <div className="user-action">
-      <h1>User Dashboard</h1>
-      
+return (
+  <div className="user-action">
+    <h1>User Dashboard</h1>     
       <div className="action-buttons">
         <Link to="profile" className="profile-button">
           <img src={profileImg} alt="Profile" />
@@ -54,8 +52,7 @@ function UserAction() {
             </div>
           ))}
         </div>
-      </div>
-      
+      </div>      
       <Outlet />
     </div>
   );

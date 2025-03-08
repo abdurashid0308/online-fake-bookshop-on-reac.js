@@ -9,9 +9,9 @@
     align-items: center;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5); /* Qora rangdagi yarim shaffof fon */
-    backdrop-filter: blur(8px); /* Blur effekti */
-    -webkit-backdrop-filter: blur(8px); /* Safari uchun */
-    z-index: 1000; /* Boshqa elementlardan yuqorida bo'lishi uchun */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1000;
 }
 
 .auth-container {
@@ -21,8 +21,8 @@
     width: 100%;
     max-width: 400px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    z-index: 1001; /* Overlay ustida bo'lishi uchun */
-    position: relative; /* Boshqa elementlarga nisbatan */
+    z-index: 1001;
+    position: relative;
 }
 
 .auth-tabs {
@@ -58,7 +58,8 @@
 }
 
 .form-group input[type="text"],
-.form-group input[type="password"] {
+.form-group input[type="password"],
+.form-group input[type="email"] {
     width: 100%;
     padding: 12px 0;
     background: transparent;

@@ -14,7 +14,6 @@
   margin-bottom: 30px;
 }
 
-/* Action Buttons Section */
 .action-buttons {
   display: flex;
   flex-direction: column;
@@ -84,7 +83,6 @@
   margin-bottom: 10px;
 }
 
-/* Recently Viewed Books Section */
 .recently-viewed {
   margin-top: 40px;
   padding: 20px;

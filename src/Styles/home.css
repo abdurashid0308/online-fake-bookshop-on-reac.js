@@ -1,3 +1,8 @@
+:root{
+    --white: white;
+    --black: black;
+}
+
 .home-main {
     display: flex;
     flex-direction: column;
@@ -26,7 +31,7 @@
     font-size: 28px;
     font-weight: bold;
     max-width: 800px;
-    color: #ffffff;
+    color: var(--white);
     margin-bottom: 10px;
     opacity: 0;
     transform: translateY(20px);
@@ -35,7 +40,7 @@
 
 .welcome h3 {
     font-size: 20px;
-    color: #ffffff;
+    color: var(--white);
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s ease forwards 0.5s;
@@ -58,7 +63,7 @@
 .featuredbooks h1 {
     font-size: 26px;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .featuredbooks-list {
@@ -92,7 +97,7 @@
     display: flex;
     padding: 0 20px;
     justify-content: space-between;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--black);
 }
 
 .action-icon {
@@ -116,7 +121,7 @@
 
 .featuredbooks-item h3 {
     font-size: 16px;
-    color: #ffffff;
+    color: var(--white);
     margin: 10px 0;
     flex-grow: 1;
 }
@@ -124,8 +129,8 @@
 .featuredbooks-item a {
     display: inline-block;
     text-decoration: none;
-    background: #000000;
-    color: white;
+    background: var(--black);
+    color: var(--white);
     padding: 8px 15px;
     border-radius: 5px;
     font-size: 14px;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../Styles/carted.css";
+import  "../Styles/carted.css";
 import likedImg from "../Styles/Images/liked.png";
 import cartedImg from "../Styles/Images/carted.png";
 
@@ -27,13 +27,13 @@ function Carted() {
                 {cartedBooks.map((book, index) => (
                     <div key={index} className="book-card">
                         <div className="book-actions">
-                            <img src={likedImg || "/placeholder.svg"} alt="Like" className="action-icon" />
+                            <img src={likedImg} alt="Like" className="action-icon" />
                             <button className="remove-button">×</button>
                         </div>
-                        <img src={book.image || "/placeholder.svg"} alt={book.title} className="book-image" />
+                        <img src={book.image} alt={book.title} className="book-image" />
                         <h3>{book.title}</h3>
                         <div className="book-price">{book.price}</div>
-                        <Link to={`/book/${book.isbn13}`} className="read-more">
+                        <Link to={`/book/#`} className="read-more">
                             Read More
                         </Link>
                     </div>

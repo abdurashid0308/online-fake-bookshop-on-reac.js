@@ -3,16 +3,6 @@ import "../Styles/profile.css";
 
 function Profile() {
     const [activeTab, setActiveTab] = useState('signin');
-    const [formData, setFormData] = useState({
-        username: '',
-        password: '',
-        keepSignedIn: false
-    });
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Form submitted:', formData);
-    };
 
     return (
         <div className="profile-main">
@@ -32,44 +22,51 @@ function Profile() {
                     </button>
                 </div>
 
-                <form onSubmit={handleSubmit} className="auth-form">
-                    <div className="form-group">
-                        <input
-                            type="text"
-                            placeholder="USERNAME"
-                            value={formData.username}
-                            onChange={(e) => setFormData({...formData, username: e.target.value})}
-                        />
-                    </div>
-
-                    <div className="form-group">
-                        <input
-                            type="password"
-                            placeholder="PASSWORD"
-                            value={formData.password}
-                            onChange={(e) => setFormData({...formData, password: e.target.value})}
-                        />
-                    </div>
-
-                    <div className="form-group checkbox">
-                        <label>
-                            <input
-                                type="checkbox"
-                                checked={formData.keepSignedIn}
-                                onChange={(e) => setFormData({...formData, keepSignedIn: e.target.checked})}
-                            />
-                            <span>KEEP ME SIGN IN</span>
-                        </label>
-                    </div>
-
-                    <button type="submit" className="submit-button">
-                        SIGN IN
-                    </button>
-
-                    <a href="#" className="forgot-password">
-                        FORGOT PASSWORD?
-                    </a>
-                </form>
+                {activeTab === 'signin' ? (
+                    // Sign In Form
+                    <form className="auth-form">
+                        <div className="form-group">
+                            <input type="text" placeholder="USERNAME" />
+                        </div>
+                        <div className="form-group">
+                            <input type="password" placeholder="PASSWORD" />
+                        </div>
+                        <div className="form-group checkbox">
+                            <label>
+                                <input type="checkbox" />
+                                <span>KEEP ME SIGN IN</span>
+                            </label>
+                        </div>
+                        <button type="submit" className="submit-button">
+                            SIGN IN
+                        </button>
+                        <a href="#" className="forgot-password">
+                            FORGOT PASSWORD?
+                        </a>
+                    </form>
+                ) : (
+                    // Sign Up Form
+                    <form className="auth-form">
+                        <div className="form-group">
+                            <input type="text" placeholder="FULL NAME" />
+                        </div>
+                        <div className="form-group">
+                            <input type="email" placeholder="EMAIL" />
+                        </div>
+                        <div className="form-group">
+                            <input type="text" placeholder="USERNAME" />
+                        </div>
+                        <div className="form-group">
+                            <input type="password" placeholder="PASSWORD" />
+                        </div>
+                        <div className="form-group">
+                            <input type="password" placeholder="CONFIRM PASSWORD" />
+                        </div>
+                        <button type="submit" className="submit-button">
+                            SIGN UP
+                        </button>
+                    </form>
+                )}
             </div>
         </div>
     );

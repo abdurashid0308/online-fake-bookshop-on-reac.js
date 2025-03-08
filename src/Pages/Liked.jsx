@@ -32,7 +32,7 @@ function Liked() {
                         </div>
                         <img src={book.image} alt={book.title} className="book-image" />
                         <h3>{book.title}</h3>
-                        <Link to={`/book/${book.isbn13}`} className="read-more">
+                        <Link to={`/book/#`} className="read-more">
                             Read More
                         </Link>
                     </div>

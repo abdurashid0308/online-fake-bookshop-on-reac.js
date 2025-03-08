@@ -72,6 +72,9 @@ header nav ul .button:hover {
 
 .searchBar button:hover {
   background-color: var(--hover-color);
+
+
+  
   color: var(--white);
 }
 
